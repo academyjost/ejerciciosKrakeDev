@@ -1,0 +1,74 @@
+/* Configuración General */
+body {
+    background-color: #000000; /* Negro de fondo */
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Título o Contenedor con temática matemática */
+body::before {
+    content: "Σ (EJERCICIOS) = {1, 2, 3, 4}";
+    font-size: 1.5rem;
+    color: #00d4ff; /* Azul Neón */
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px #00d4ff;
+}
+
+/* Contenedor de Botones */
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 15px;
+    background: rgba(10, 10, 10, 0.9);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo de los Botones */
+button {
+    background-color: #000000;
+    color: #fff;
+    border: 2px solid;
+    padding: 15px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    position: relative;
+}
+
+/* Botones con colores específicos y efecto neón */
+button:nth-child(1) { border-color: #ff004c; color: #ff004c; } /* Rojo Neón */
+button:nth-child(2) { border-color: #00d4ff; color: #00d4ff; } /* Azul Neón */
+button:nth-child(3) { border-color: #ff004c; color: #ff004c; }
+button:nth-child(4) { border-color: #00d4ff; color: #00d4ff; }
+
+/* Efectos al pasar el mouse (Hover) */
+button:hover {
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 0 20px currentColor;
+    transform: translateY(-3px);
+}
+
+/* Símbolos matemáticos en los botones */
+button::after {
+    display: block;
+    font-size: 10px;
+    margin-top: 5px;
+}
+button:nth-child(1)::after { content: "f(x) = i++"; }
+button:nth-child(2)::after { content: "f(x) = i--"; }
+button:nth-child(3)::after { content: "i % 2 == 0"; }
+button:nth-child(4)::after { content: "i % 2 != 0"; }
